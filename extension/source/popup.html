@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LLM Prompts</title>
+  <style>
+    body {
+      width: 500px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    .settings {
+      margin-bottom: 15px;
+    }
+    .search-container {
+      margin: 15px 0;
+      display: flex;
+      gap: 10px;
+    }
+    .search-input {
+      flex-grow: 1;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .tags-container {
+      margin: 10px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .tag {
+      background: #e1e4e8;
+      padding: 3px 8px;
+      border-radius: 12px;
+      font-size: 12px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .tag.active {
+      background: #0366d6;
+      color: white;
+    }
+    .prompt-card {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 4px;
+    }
+    .prompt-text {
+      margin: 10px 0;
+    }
+    .prompt-tags {
+      display: flex;
+      gap: 5px;
+      margin-top: 5px;
+    }
+    .prompt-tag {
+      background: #e1e4e8;
+      padding: 2px 6px;
+      border-radius: 10px;
+      font-size: 11px;
+    }
+    .copy-btn {
+      background: #0366d6;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .no-results {
+      text-align: center;
+      color: #666;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="settings">
+    <input type="text" id="repo-url" placeholder="GitHub repo URL" style="width: 70%">
+    <button id="save-settings">Save</button>
+  </div>
+  <div class="search-container">
+    <input type="text" id="search-input" class="search-input" placeholder="Search prompts...">
+  </div>
+  <div id="tags-container" class="tags-container"></div>
+  <div id="prompts-container"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

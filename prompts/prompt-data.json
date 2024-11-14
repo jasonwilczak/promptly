@@ -1,0 +1,44 @@
+{
+    "prompts": [
+      {
+        "text": "Please analyze the following code for potential security vulnerabilities and suggest improvements: [CODE]",
+        "tags": ["security", "code-review", "analysis"]
+      },
+      {
+        "text": "Create a comprehensive unit test suite for this function, including edge cases and error conditions: [FUNCTION]",
+        "tags": ["testing", "code-quality", "development"]
+      },
+      {
+        "text": "Explain the following complex algorithm in simple terms, as if teaching to a junior developer: [ALGORITHM]",
+        "tags": ["educational", "algorithms", "explanation"]
+      },
+      {
+        "text": "Optimize this database query for better performance while maintaining its functionality: [QUERY]",
+        "tags": ["database", "optimization", "sql"]
+      },
+      {
+        "text": "Review this API design and suggest improvements following RESTful principles and best practices: [API_SPEC]",
+        "tags": ["api-design", "rest", "architecture"]
+      },
+      {
+        "text": "Generate comprehensive documentation for this code module, including usage examples and edge cases: [MODULE]",
+        "tags": ["documentation", "technical-writing"]
+      },
+      {
+        "text": "Analyze this user story and break it down into technical requirements and acceptance criteria: [USER_STORY]",
+        "tags": ["requirements", "agile", "planning"]
+      },
+      {
+        "text": "Suggest refactoring opportunities in this code to improve maintainability and readability: [CODE]",
+        "tags": ["refactoring", "code-quality", "maintenance"]
+      },
+      {
+        "text": "Design a scalable system architecture for the following requirements, including diagrams and component descriptions: [REQUIREMENTS]",
+        "tags": ["architecture", "system-design", "planning"]
+      },
+      {
+        "text": "Review this pull request and provide detailed feedback on code quality, performance, and potential issues: [PR_DESCRIPTION]",
+        "tags": ["code-review", "collaboration", "quality"]
+      }
+    ]
+  }

@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "LLM Prompts from GitHub",
+  "version": "1.0",
+  "description": "Fetches and displays LLM prompts from a GitHub repository with search and filtering",
+  "permissions": ["storage", "activeTab"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
