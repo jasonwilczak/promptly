@@ -2,89 +2,43 @@
 <html>
 <head>
   <title>LLM Prompts</title>
-  <style>
-    body {
-      width: 500px;
-      padding: 15px;
-      font-family: Arial, sans-serif;
-    }
-    .settings {
-      margin-bottom: 15px;
-    }
-    .search-container {
-      margin: 15px 0;
-      display: flex;
-      gap: 10px;
-    }
-    .search-input {
-      flex-grow: 1;
-      padding: 5px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-    }
-    .tags-container {
-      margin: 10px 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-    }
-    .tag {
-      background: #e1e4e8;
-      padding: 3px 8px;
-      border-radius: 12px;
-      font-size: 12px;
-      cursor: pointer;
-      user-select: none;
-    }
-    .tag.active {
-      background: #0366d6;
-      color: white;
-    }
-    .prompt-card {
-      border: 1px solid #ddd;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 4px;
-    }
-    .prompt-text {
-      margin: 10px 0;
-    }
-    .prompt-tags {
-      display: flex;
-      gap: 5px;
-      margin-top: 5px;
-    }
-    .prompt-tag {
-      background: #e1e4e8;
-      padding: 2px 6px;
-      border-radius: 10px;
-      font-size: 11px;
-    }
-    .copy-btn {
-      background: #0366d6;
-      color: white;
-      border: none;
-      padding: 5px 10px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .no-results {
-      text-align: center;
-      color: #666;
-      margin: 20px 0;
-    }
-  </style>
+  <link rel="stylesheet" href="popup.css">  
 </head>
 <body>
-  <div class="settings">
-    <input type="text" id="repo-url" placeholder="GitHub repo URL" style="width: 70%">
-    <button id="save-settings">Save</button>
-  </div>
+  <header>
+    <h1>Promptly</h1>
+    <span class="signature"><i>Written with <3 by <a href="https://github.com/jasonwilczak">Jason Wilczak</a> & <a href="https://claude.ai/">claude.ai</a></i></span>
+  </header>
   <div class="search-container">
     <input type="text" id="search-input" class="search-input" placeholder="Search prompts...">
   </div>
   <div id="tags-container" class="tags-container"></div>
   <div id="prompts-container"></div>
+  <div class="pagination">
+    <div class="items-per-page">
+      <label for="page-size">Show:</label>
+      <select id="page-size">
+        <option value="5">5</option>
+        <option value="10" selected>10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+      </select>
+    </div>
+    <div class="pagination-controls">
+      <button id="first-page" class="page-button"><<</button>
+      <button id="prev-page" class="page-button"><</button>
+      <span class="page-info">
+        Page <span id="current-page">1</span> of <span id="total-pages">1</span>
+        (<span id="total-items">0</span> items)
+      </span>
+      <button id="next-page" class="page-button">></button>
+      <button id="last-page" class="page-button">>></button>
+    </div>
+  </div>
+  <footer>
+    <p>Interested in helping? Adding more prompts? Something else? Open up an issue <a href="https://github.com/jasonwilczak/promptly/issues">here</a> or check out contribution guidelines <a href="https://github.com/jasonwilczak/promptly/blob/main/README.md">here</a>!</p>
+  </footer>
+  <script src="pagination.js"></script>
   <script src="popup.js"></script>
 </body>
 </html>

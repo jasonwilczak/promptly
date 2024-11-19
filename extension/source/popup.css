@@ -1,0 +1,250 @@
+body {
+    width: 500px;
+    padding: 15px;
+    font-family: 'Roboto Mono', monospace;
+    background: #0a0f18;
+    color: #7ba6c7;
+    box-shadow: 0 0 20px rgba(0, 149, 255, 0.1);
+    height: 600px;
+  }
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-height: 30px;
+    align-items: center;
+  }
+header .signature {
+    font-size: smaller;
+}
+
+footer {
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+  .search-container {
+    margin: 15px 0;
+    display: flex;
+    gap: 10px;
+    position: relative;
+  }
+  
+  .search-input {
+    flex-grow: 1;
+    padding: 12px;
+    background: rgba(13, 25, 48, 0.8);
+    border: 1px solid #234878;
+    border-radius: 2px;
+    color: #7ba6c7;
+    font-family: 'Roboto Mono', monospace;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 149, 255, 0.1);
+  }
+  
+  .search-input:focus {
+    outline: none;
+    border-color: #3e88d6;
+    box-shadow: 0 0 20px rgba(0, 149, 255, 0.2);
+  }
+  
+  .tags-container {
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .tag {
+    background: rgba(13, 25, 48, 0.8);
+    padding: 5px 12px;
+    border: 1px solid #234878;
+    border-radius: 2px;
+    font-size: 12px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+    color: #7ba6c7;
+  }
+  
+  .tag:hover {
+    background: rgba(19, 37, 71, 0.8);
+    border-color: #3e88d6;
+    box-shadow: 0 0 10px rgba(0, 149, 255, 0.2);
+  }
+  
+  .tag.active {
+    background: #3e88d6;
+    color: #0a0f18;
+    border-color: #7ba6c7;
+    box-shadow: 0 0 15px rgba(0, 149, 255, 0.3);
+  }
+  
+  .prompt-card {
+    position: relative;
+    border: 1px solid #234878;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 2px;
+    background: rgba(13, 25, 48, 0.8);
+    box-shadow: 0 0 15px rgba(0, 149, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .prompt-card:hover {
+    box-shadow: 0 0 20px rgba(0, 149, 255, 0.2);
+    border-color: #3e88d6;
+  }
+  
+  .prompt-header {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 1;
+  }
+  
+  .prompt-text {
+    margin-right: 40px;
+    margin-top: 15px;
+    line-height: 1.6;
+  }
+  
+  .prompt-tags {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  
+  .prompt-tag {
+    background: rgba(19, 37, 71, 0.8);
+    padding: 3px 8px;
+    border-radius: 2px;
+    font-size: 11px;
+    border: 1px solid #234878;
+    color: #7ba6c7;
+  }
+  
+  .copy-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: 1px solid #234878;
+    border-radius: 6px;
+    padding: 6px;
+    cursor: pointer;
+    color: #7ba6c7;
+    opacity: 0.6;
+    transition: all 0.2s ease;
+  }
+  
+  .copy-btn:hover {
+    opacity: 1;
+    background: rgba(13, 25, 48, 0.8);
+    border-color: #3e88d6;
+  }
+  
+  .copy-btn.copied {
+    border-color: #3e88d6;
+    color: #3e88d6;
+    opacity: 1;
+  }
+  
+  .copy-btn svg {
+    width: 16px;
+    height: 16px;
+    display: block;
+  }
+  
+  .copy-icon, .check-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .no-results {
+    text-align: center;
+    color: #7ba6c7;
+    margin: 30px 0;
+    font-style: italic;
+    opacity: 0.7;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding: 15px 0;
+    border-top: 1px solid #234878;
+  }
+  
+  .pagination-controls {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  
+  .page-button {
+    background: rgba(13, 25, 48, 0.8);
+    border: 1px solid #234878;
+    border-radius: 2px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #7ba6c7;
+    font-family: 'Roboto Mono', monospace;
+    transition: all 0.3s ease;
+  }
+  
+  .page-button:hover:not(:disabled) {
+    background: rgba(19, 37, 71, 0.8);
+    border-color: #3e88d6;
+    box-shadow: 0 0 10px rgba(0, 149, 255, 0.2);
+  }
+  
+  .page-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .page-info {
+    font-size: 12px;
+    color: #7ba6c7;
+    opacity: 0.8;
+  }
+  
+  .items-per-page {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .items-per-page select {
+    padding: 6px;
+    border-radius: 2px;
+    border: 1px solid #234878;
+    background: rgba(13, 25, 48, 0.8);
+    color: #7ba6c7;
+    font-family: 'Roboto Mono', monospace;
+  }
+  
+  .loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #234878;
+    border-radius: 50%;
+    border-top-color: #3e88d6;
+    animation: spin 1s linear infinite;
+    box-shadow: 0 0 15px rgba(0, 149, 255, 0.2);
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap');

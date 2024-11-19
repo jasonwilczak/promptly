@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "LLM Prompts from GitHub",
+  "name": "Promptly",
   "version": "1.0",
   "description": "Fetches and displays LLM prompts from a GitHub repository with search and filtering",
   "permissions": ["storage", "activeTab"],
